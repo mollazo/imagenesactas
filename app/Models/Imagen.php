@@ -16,6 +16,8 @@ class Imagen extends Model
      */
     protected $guarded = [];
 
+    protected $fillable=['url'];
+
     /**
      * The attributes that should be cast to native types.
      *
@@ -36,5 +38,9 @@ class Imagen extends Model
     public function user()
     {
         return $this->belongsTo(\App\User::class);
+    }
+
+    public function getUrlPathAttribute(){
+        return url($this->url);
     }
 }

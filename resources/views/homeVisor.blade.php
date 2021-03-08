@@ -43,8 +43,8 @@
                         @else
                         <div id="aniimated-thumbnials">
                         @foreach($imagenes as $imagen)
-                            <a href="{{$imagen->url}}" >
-                                <img src="{{$imagen->url}}" width="200" height="200" />
+                            <a href="{{$imagen->url_path}}" >
+                                <img src="{{$imagen->url_path}}" width="200" height="200" />
                             </a>
                         @endforeach
                         </div>

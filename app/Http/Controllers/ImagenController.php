@@ -37,7 +37,7 @@ class ImagenController extends Controller
 
     public function upload($id, Request $request)
     {
-        //
+        
         $acta=Acta::find($id);
         $ruta='/public/imagenes/'.$acta->provincia.'/'.$acta->municipio.'/'.$acta->localidad.'/'.$acta->recinto.'/'.$acta->mesa;
         $nombre = $request->file('file')->getClientOriginalName();
